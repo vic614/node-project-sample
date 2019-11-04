@@ -1,0 +1,13 @@
+*.sw?
+dist
+coverage
+junit.xml
+node_modules
+.nyc_output
+.scannerwork
+external
+ignore
+.idea
+.vscode
+*package-lock.json
+testrun.log
