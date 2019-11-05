@@ -5,5 +5,6 @@ const moment = require("moment");
  */
 export function parseBusinessDate(candidate: string): string {
     const date = Date.parse(candidate);
+    console.log(date);
     return moment(date).format("YYYY-MM-DD");
 }
