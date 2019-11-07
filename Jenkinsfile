@@ -1,5 +1,5 @@
 podTemplate(containers: [
-    containerTemplate(name: 'node', image: 'node:8.16.2-alpine', ttyEnabled: true, envVars:[(key: "HOME",value: "/home/jenkins/agent")],command: 'cat')
+    containerTemplate(name: 'node', image: 'node:8.16.2-alpine', ttyEnabled: true, envVars:[env(key: "HOME",value: "/home/jenkins/agent")],command: 'cat')
   ]) {
     node(POD_LABEL) {
         stage('Checkout node-peoject-example') {
