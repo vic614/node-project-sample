@@ -1,8 +1,10 @@
 podTemplate(containers: [
     containerTemplate(name: 'node', image: 'node:8.16.2-alpine', ttyEnabled: true, command: 'cat')
   ]) {
-
     node(POD_LABEL) {
+        environment {
+            HOME = "${JENKINS_AGENT_WORKDIR}"
+        }
         stage('Checkout node-peoject-example') {
             git 'https://github.com/vic614/node-project-sample'
             container('node') {
