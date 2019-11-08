@@ -11,3 +11,4 @@ ignore
 .vscode
 *package-lock.json
 testrun.log
+**/.DS_Store
